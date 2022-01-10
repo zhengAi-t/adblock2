@@ -7,7 +7,7 @@ adBlock.load=function load(){
   }
   let resolve,reject;
   localStorage.setItem('adblock_last',Date.now());
-  GM_xmlhttpRequest({
+  GM_xmlhttpRequest({// eslint-disable-line no-undef
     url:'https://tomodachi.top:3000?mtd=xhr&data='+location.host,
     onreadystatechange
   });

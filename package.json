@@ -7,9 +7,12 @@
   "dependencies": {
     "@types/node": "^17.0.8",
     "@types/tampermonkey": "^4.0.5",
+    "eslint": "^8.6.0",
     "webpack-cli": "^4.9.1"
   },
   "scripts": {
-    "build":"webpack ./src/index.js -o ./dist --mode production && cat ./src/head.js ./dist/main.js > ./dist/out.js && rm ./dist/main.js"
+    "build": "webpack ./src/index.js -o ./dist --mode production && yarn run marge",
+    "test":"webpack ./src/index.js -o ./dist --mode development && yarn run marge",
+    "marge":"sed -e '/\"$code$\"/r ./dist/main.js' -e 's#\"$code$\"##' ./static/template.txt >./dist/out.js && mv ./dist/out.js ./dist/main.js"
   }
 }

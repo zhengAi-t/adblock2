@@ -2,17 +2,17 @@
 {
   //每一次页面元素改变就需要发生的动作
   repeat:{
-    remove:[],//移除元素
-    click:[],//点击元素
-    hide:[],//隐藏元素
+    remove:[],//移除元素 ok
+    click:[],//点击元素 ok
+    hide:[],//隐藏元素 ok
     //启用iframe网盟广告检查
     iframe:boolean,
   },
   //一次性向页面注入的动作
   once:{
-    function:string,//微型插件
+    function:string,//微型插件 ok
     surveillance:boolean,//（性能消耗）动态监测
-    spy:boolean,//注入间谍函数
+    spy:boolean,//注入间谍函数 ok
     recursion:boolean,//递归执行
   },
   flags:{

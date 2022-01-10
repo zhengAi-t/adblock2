@@ -1,6 +1,7 @@
 //所有的单次执行的特性
 import adBlock from "../adblock";
-adBlock.once=function once(rule){
+adBlock.once=once;
+function once(rule){
   for(let i in rule){
     if(!once[i])continue;
     once[i].call(adBlock,rule[i]);
