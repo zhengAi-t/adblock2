@@ -10,8 +10,8 @@ function main(){
   }
 }
 adBlock.execRule=execRule.bind(adBlock);
+adBlock.plugins={};
 function execRule(){
-  debugger;
   for(let i in this.rule){
     if(!this[i])continue;
     this[i](this.rule[i]);

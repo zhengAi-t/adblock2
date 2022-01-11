@@ -13,7 +13,7 @@
     function:string,//微型插件 ok
     surveillance:boolean,//（性能消耗）动态监测
     spy:boolean,//注入间谍函数 ok
-    recursion:boolean,//递归执行
+    recur:boolean,//递归执行
   },
   flags:{
     report:boolean,
@@ -38,7 +38,7 @@ surveillance：boolean，
 spy：boolean，
 
 //递归执行开关，（用于递归式向页面中的所有iframe添加程序实例）
-recursion：boolean
+recur：boolean
 
 //日志上报开关，（用于向服务器上报页面的广告情况）
 report：boolean，

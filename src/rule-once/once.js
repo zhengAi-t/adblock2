@@ -8,6 +8,7 @@ function once(rule){
   }
 }
 once.function=function(rule){
+  debugger;
   Function(`return function(adBlock){\n${rule}\n}`)()
     .call(adBlock,adBlock);
 }
